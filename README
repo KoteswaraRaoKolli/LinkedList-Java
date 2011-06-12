@@ -1,0 +1,12 @@
+A simple implementation of singly Linked List data structure written in Java. The project contains the following files:
+
+src/IntegerNode.java
+	A class to represent a single node in a linked list. This is a simplified class which only stores integer data
+src/LinkedList.java
+	Represents the LinkedList class, and a set of common operations (such as addToHead, addToTail etc.)
+src/LinkedListUtils.java
+	A class that contains utility methods that perform miscellaneous operations on the LinkedList class in LinkedList.java
+test/LinkedListTest.java
+	JUnit tests for the LinkedList class in LinkedList.java
+test/LinkedListUtilsTest.java
+	JUnit tests for the various utility functions in LinkedListUtils.java 
