@@ -189,9 +189,9 @@ public class LinkedListUtils {
 	 * contains a loop). This means a list in which a node's next pointer points
 	 * to an earlier node, so as to make a loop in the linked list. For
 	 * instance:
+	 * 			A -> B -> C -> D -> E -> C [the same C as earlier]  
 	 * 
-	 * input: A -> B -> C -> D -> E -> C [the same C as earlier] output: C
-	 * (CCI_0205)
+	 *  (CCI_0205)
 	 * 
 	 * @param linkedList
 	 *            the linked list to be tested
@@ -225,17 +225,18 @@ public class LinkedListUtils {
 	}
 
 	/**
-	 * Checks if the given linked list is a circular linked list (i.e. it
-	 * contains a loop). This means a list in which a node's next pointer points
-	 * to an earlier node, so as to make a loop in the linked list. If a loop
-	 * exists, it returns the node at the beginning of the loop. For instance:
+	 * Returns the node at the start of a loop in the given circular linked list. 
+	 * A circular list is one in which a node's next pointer points to an earlier 
+	 * node, so as to make a loop in the linked list. For instance:
 	 * 
-	 * input: A -> B -> C -> D -> E -> C [the same C as earlier] output: C
+	 * input: A -> B -> C -> D -> E -> C [the same C as earlier] 
+	 * output: C
+	 * 
 	 * (CCI_0205)
 	 * 
 	 * @param linkedList
 	 *            list to be tested
-	 * @return the node at the start of the loop
+	 * @return the node at the start of the loop if there is a loop, null otherwise
 	 */
 	public static IntegerNode findLoopStart(LinkedList linkedList) {
 		if (linkedList == null || linkedList.getHead() == null) {
