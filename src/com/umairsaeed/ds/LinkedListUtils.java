@@ -225,9 +225,10 @@ public class LinkedListUtils {
 	}
 
 	/**
-	 * Returns the node at the start of a loop in the given circular linked list. 
-	 * A circular list is one in which a node's next pointer points to an earlier 
-	 * node, so as to make a loop in the linked list. For instance:
+	 * Returns the node at the start of a loop in the given circular linked
+	 * list. A circular list is one in which a node's next pointer points 
+	 * to an earlier node, so as to make a loop in the linked list. For 
+	 * instance:
 	 * 
 	 * input: A -> B -> C -> D -> E -> C [the same C as earlier] 
 	 * output: C
@@ -236,7 +237,8 @@ public class LinkedListUtils {
 	 * 
 	 * @param linkedList
 	 *            list to be tested
-	 * @return the node at the start of the loop if there is a loop, null otherwise
+	 * @return the node at the start of the loop if there is a loop, null 
+	 * otherwise
 	 */
 	public static IntegerNode findLoopStart(LinkedList linkedList) {
 		if (linkedList == null || linkedList.getHead() == null) {
