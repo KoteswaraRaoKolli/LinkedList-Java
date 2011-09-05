@@ -146,11 +146,11 @@ public class LinkedListUtils {
 		IntegerNode iter2 = rhs.getHead();
 
 		int sum = 0;
-		int remainder = 0;
+		int carry = 0;
 
 		while (iter1 != null && iter2 != null) {
-			sum = iter1.getData() + iter2.getData() + remainder;
-			remainder = sum / 10;
+			sum = iter1.getData() + iter2.getData() + carry;
+			carry = sum / 10;
 			sum = sum % 10;
 
 			result.addToTail(new IntegerNode(sum));
@@ -160,8 +160,8 @@ public class LinkedListUtils {
 
 		// At least one of the iters is null now
 		while (iter1 != null) {
-			sum = iter1.getData() + remainder;
-			remainder = sum / 10;
+			sum = iter1.getData() + carry;
+			carry = sum / 10;
 			sum = sum % 10;
 
 			result.addToTail(new IntegerNode(sum));
@@ -169,16 +169,16 @@ public class LinkedListUtils {
 		}
 
 		while (iter2 != null) {
-			sum = iter2.getData() + remainder;
-			remainder = sum / 10;
+			sum = iter2.getData() + carry;
+			carry = sum / 10;
 			sum = sum % 10;
 
 			result.addToTail(new IntegerNode(sum));
 			iter2 = iter2.getNext();
 		}
 
-		if (remainder > 0) {
-			result.addToTail(new IntegerNode(remainder));
+		if (carry > 0) {
+			result.addToTail(new IntegerNode(carry));
 		}
 
 		return result;
